@@ -1,5 +1,5 @@
 # BeautifulWeather
-# Задача - Умный сервис прогноза погоды. Средний уровень сложности.
+# Умный сервис прогноза погоды. Средний уровень сложности.
 
 Сделано с использованием Python 3, Django.
 
@@ -10,16 +10,17 @@ TODO: Нужно будет добавить проверку, если за п�
 TODO: сменить тип результата и сделать красивый вывод данных.
 
 # Для запуска 
-нужно клонировать проект, составить .env файл:
+нужно клонировать проект, составить .env файл (на уровне c manage.py):
+```
 SECRET_KEY=
-DEBUG=
-HOST=
-DATABASE_NAME=
-DATABASE_USER=
-DATABASE_PASSWORD=
+DEBUG=True
+HOST=0.0.0.0
+DATABASE_NAME=beautiful_weather_db
+DATABASE_USER=user
+DATABASE_PASSWORD=password
 WEATHER_API_KEY=
-WEATHER_API_URL=
-
+WEATHER_API_URL=http://api.openweathermap.org/data/2.5/weather
+```
 Создать локально БД PostgreSQL (и запустить сервер с постгрес если нет).
 $ psql postgres
 $ create database DATABASE_NAME with owner DATABASE_USER template template0 encoding 'utf8';
