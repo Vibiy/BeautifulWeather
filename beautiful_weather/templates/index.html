@@ -1,0 +1,22 @@
+<div>
+  <h2>Сервис для проверки погоды в городе</h2>
+  <form action="{% url 'result' %}"
+        method="POST">
+
+    {% csrf_token %}
+
+    <label for="city">Введите название города, в котором вы хотите узнать погоду:</label>
+    <input type="text"
+           name="city"
+           id="city"
+           required
+           placeholder="Название города">
+
+    <div>
+      <button type="submit">
+        Узнать погоду
+      </button>
+    </div>
+
+  </form>
+</div>
