@@ -10,33 +10,19 @@ TODO: Нужно будет добавить проверку, если за п�
 TODO: сменить тип результата и сделать красивый вывод данных.
 
 # Для запуска 
-нужно клонировать проект, составить .env файл (на уровне c manage.py):
+нужно клонировать проект, составить .env файл
 ```
 SECRET_KEY=
 DEBUG=True
-HOST=0.0.0.0
-DATABASE_NAME=beautiful_weather_db
-DATABASE_USER=user
-DATABASE_PASSWORD=password
+ALLOWED_HOSTS=*
 WEATHER_API_KEY=
 WEATHER_API_URL=http://api.openweathermap.org/data/2.5/weather
 ```
-Создать локально БД PostgreSQL (и запустить сервер с постгрес если нет).
-$ psql postgres
-$ create database DATABASE_NAME with owner DATABASE_USER template template0 encoding 'utf8';
-$ \q
-Создать виртуальное окружение c Python 3. 
-$ virtualenv --python=python3 env
-Активировать его. 
-$ source env/bin/activate
-Перейти на уровень ниже
-$ cd beautiful_weather/
-Установить все из requirements.txt
-$ pip install -r requirements.txt
-Запустить проект
-$ python manage.py runserver
+SECRET_KEY и WEATHER_API_KEY я могу выслать
 
-Для проверки могу выслать свой env-файл.
-TODO: завернуть в докер, чтобы было прилично. Пока очень сыро.
+ключ для API можно получить тут https://openweathermap.org/
+
+команда для запуска:
+$ docker-compose up --build --remove-orphans -d
 
 Видео: https://www.loom.com/share/c3b1e74c1c004133a46ac492d1172945
