@@ -14,6 +14,7 @@ TODO: сменить тип результата и сделать красив�
 ```
 SECRET_KEY=
 DEBUG=True
+HOST=0.0.0.0
 ALLOWED_HOSTS=*
 WEATHER_API_KEY=
 WEATHER_API_URL=http://api.openweathermap.org/data/2.5/weather
